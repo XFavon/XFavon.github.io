@@ -1,0 +1,64 @@
+// 首页分类
+.pyg_cates {
+     display: flex;
+     a {
+          flex: 1;
+          padding: 10px;
+
+          img {
+               width: 100%;
+          }
+     }
+}
+.pyg_lists{
+    a{
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        margin: 0;
+        padding: 0;
+        justify-content: space-between;
+      
+        li{
+            width: 49%;
+            margin-top: 5px;
+            background-color: #fff;
+            margin-bottom:5px; 
+            padding-left: 5px;
+            .goods_detail{
+                img{
+                    display: block;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+                .goods_name{
+                    height: 45px;
+                    overflow: hidden;
+                    color: #000;
+                    font-size: 14px;
+                
+                }
+                .goods_price{
+                    color: red;
+                    font-size: 15px;
+                }
+            }
+            .goods_likes{
+                display: block;
+                margin: 0 auto;
+                width: 60%;;
+            }
+
+        }
+    }
+}
+
+
+

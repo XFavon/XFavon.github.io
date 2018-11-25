@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>驴妈妈首页</title>
+</head>
+
+<body>
+
+    <!-- 头部 -->
+    <header class="pyg_search">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+
+    <!-- 主干内容 -->
+    <div class="pyg_view">
+        <!-- 轮播图 -->
+        <div class="pyg_silder"></div>
+        <!-- 首页分类内容 -->
+        <div class="pyg_cates">
+        </div>
+        <!-- 数据 -->
+        <div class="pyg_lists"> </div>
+
+
+
+    </div>
+
+    <!-- 底部 -->
+    <footer class="pyg_footer">
+        <a href="index.html">
+            <span class="fa fa-home"></span>
+            <div>首页</div>
+        </a>
+        <a href="./pages/category.html">
+            <span class="fa fa-list-ul"></span>
+            <div>分类</div>
+        </a>
+        <a href="./pages/cart.html">
+            <span class="fa fa-cart-arrow-down"></span>
+            <div>购物车</div>
+        </a>
+        <a href="./pages/me.html">
+            <span class="fa fa-user-circle"></span>
+            <div>我的</div>
+        </a>
+    </footer>
+
+
+
+
+
+    <!-- 模板专区 -->
+    <!-- 轮播图模板 -->
+    <script type="text/template" id="sliderTmp">
+        <div class="mui-slider">
+<div class="mui-slider-group mui-slider-loop">
+    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{data[data.length-1].image_src}}" /></a></div>
+    {{each data value index}}
+    <div class="mui-slider-item"><a href="#"><img src="{{value.image_src}}" /></a></div>
+    {{/each}}
+    <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="{{data[0].image_src}}" /></a></div>
+</div>
+<!-- 索引器 -->
+<div class="mui-slider-indicator">
+        {{each data  value index}}
+        {{if index==0}}
+   <div class="mui-indicator mui-active"></div>
+   {{/if}}
+   {{if index!=0}}
+   <div class="mui-indicator"></div>
+   {{/if}}
+   {{/each}}
+</div>
+</div>
+
+</script>
+    <!-- 分页数据模板 -->
+    <script type="text/template" id="catesTmp">
+        {{each data value index}}
+    <a href="#">
+            <img src="{{value.image_src}}" alt="">
+    </a>
+    {{/each}}
+</script>
+
+    <!-- 主干数据   -->
+    <script type="text/template" id="goodsTmp">
+        {{each data value1 index1}}
+        <div class="goods_item">
+                <a href="#"><img src="{{value1.group_img}}" alt=""></a>
+                <ul>
+                    {{each value1.goods value2 index2}}
+                    <li>
+                        <a href="#" class="goods_detail">
+                            <img src="{{value2.goods_small_logo}}"
+                                alt="">
+                            <div class="goods_name">{{value2.goods_name}}</div>
+                            <div class="goods_price">￥{{value2.goods_price}}</div>
+                            <a type="button" class="goods_likes mui-btn mui-btn-primary mui-btn-outlined" href="./pages/goods_list.html?cid={{value2.goods_cid}}">找相似</a>
+                        </a>
+                    </li>
+                    {{/each}}
+                </ul>
+        </div>  
+        {{/each}}
+ 
+
+
+    </script>
+
+
+    <!-- 模板专区 -->
+
+
+
+
+
+
+
+</body>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/zepto/zepto.js"></script>
+<script src="./lib/arttemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

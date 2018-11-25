@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
+    <link rel="stylesheet" href="../lib/mui/css/mui.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/category.css">
+    <title>产品分类</title>
+</head>
+
+<body>
+
+    <!-- 头部 -->
+    <header class="pyg_search">
+        <div class="mui-input-row mui-search">
+            <input type="search" class="mui-input-clear" placeholder="">
+        </div>
+    </header>
+
+    <div class="pyg_view">
+        <div class="left"></div>
+        <div class="rigth">
+        </div>
+    </div>
+
+
+
+
+
+    <!-- 底部 -->
+    <footer class="pyg_footer">
+        <a href="../index.html">
+            <span class="fa fa-home"></span>
+            <div>首页</div>
+        </a>
+        <a href="./category.html">
+            <span class="fa fa-list-ul"></span>
+            <div>分类</div>
+        </a>
+        <a href=./cart.html>
+            <span class="fa fa-cart-arrow-down"></span>
+            <div>购物车</div>
+        </a>
+        <a href="./me.html">
+            <span class="fa fa-user-circle"></span>
+            <div>我的</div>
+        </a>
+    </footer>
+
+   <!-- goods_list.html?cid={{subValue.cat_id}} -->
+
+
+
+    <!-- 模板专区 -->
+    <!-- 生成Tab栏左侧功能 -->
+<script type="text/template" id="lisTmp">
+    <ul>
+{{each data value index }}
+        {{if index == 0}}
+    <li class="active">{{value.cat_name}}</li>
+        {{/if}}
+        {{if index != 0}}
+        <li>{{value.cat_name}}</li>
+        {{/if}}
+{{/each}}
+</ul>
+</script>
+
+<!-- 生成主要数据 -->
+<script type="text/template" id="categoriesTmp">
+    <div>
+{{each data value index}}
+<div class="goods_items">
+    <div class="goods_title">{{value.cat_name}}</div>
+    <div class="goods_content">
+        <ul>
+            {{each value.children subvalue subindex}}
+            <li>
+                <a href="goods_list.html?cid={{subvalue.cat_id}}">
+                    <img src="http://api.pyg.ak48.xyz/{{subvalue.cat_icon}}" alt="">
+                    <div>{{subvalue.cat_name}}</div>
+                </a>
+            </li>
+{{/each}}
+        </ul>
+    </div>   
+</div>
+{{/each}}
+</div>
+
+</script>
+
+    <!-- 模板专区 -->
+
+
+
+
+
+
+
+</body>
+<script src="../lib/mui/js/mui.js"></script>
+<script src="../lib/zepto/zepto.js"></script>
+<script src="../lib/arttemplate/template-web.js"></script>
+<script src="../lib/iscroll/iscroll.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/category.js"></script>
+
+</html>

@@ -1,0 +1,84 @@
+//
+html,body{
+     height: 100%;   
+}
+
+body{
+    padding-top: 45px;
+    padding-bottom: 50px;
+}
+//轮播图样式
+.pyg_view{
+    height: 100%;
+    overflow: scroll;
+}
+
+//顶部搜索框样式
+.pyg_search{
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    padding: 5px;
+}
+
+//底部样式
+.pyg_footer{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-top: 1px solid #ccc;
+    display: flex;
+    a{
+        flex: 1;
+        text-align: center;
+        color: #000;
+        padding-top: 5px;
+        span{
+            font-size: 24px;
+        }
+        div{
+            font-size: 16px;
+        }
+    }
+}
+
+
+//@at-root//@at-root
+.loadding {
+    //  实现遮罩层
+    &::before {
+         position: fixed;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-color: #fff;
+         z-index: 1000;
+         content: "";
+         opacity: .8;
+    }
+    // 样式的图标
+    &::after {
+         display: inline-block;
+         font: normal normal normal 14px/1 FontAwesome;
+         font-size: inherit;
+         text-rendering: auto;
+         -webkit-font-smoothing: antialiased;
+         animation: fa-spin 2s infinite linear;
+         content: "\f021";
+         position: fixed;
+         top: 30%;
+         left: 50%;
+         // transform: translateX(-50%);
+         margin-left: -43px;
+         z-index: 1001;
+         font-size: 100px;
+         color: red;
+    }
+}

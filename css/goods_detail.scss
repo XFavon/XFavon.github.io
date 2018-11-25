@@ -1,0 +1,64 @@
+.pyg_view{
+    background-color: #fff;
+    .goods-name{
+        font-size: 16px;
+        color: #666;
+    }
+    .goods_price{
+        font-size: 20px;
+        color: red;
+        margin:8px;
+    }
+    .goods_detail{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li{
+            height: 30px;
+            line-height: 25px;
+            display: flex;
+            border-bottom: 1px solid #cccccc;
+            font-size: 14px;
+            color: #666;
+            span:nth-of-type(1){
+                flex: 1;
+            }
+            span:nth-of-type(2){
+                flex: 5;
+            } 
+
+        }
+    }
+}
+  // tab 选项卡
+  .pyg_tab{
+    .pyg_tab_content{
+      #item2{
+        ul{
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          padding: 5px;
+          li{
+            background-color: rgb(239, 239, 244);
+            .item_title{
+              font-size: 16px;
+              border-bottom: 1px solid #666;
+              padding: 5px;
+            }
+            .item_content{
+              padding: 5px;
+              display: flex;
+              font-size: 13px;
+              span:nth-child(1){
+                flex: 1;  
+              }
+              span:nth-child(2){
+                flex: 4;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
