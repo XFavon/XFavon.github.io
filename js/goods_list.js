@@ -6,7 +6,7 @@ $(function () {
         // 查询关键字
         query: '',
         // 获取分类ID
-        cid: getUrl("cid"),
+        cid: $.getUrl("cid"),
         //页数
         pagenum: 1,
         //每页的长度
@@ -116,15 +116,6 @@ $(function () {
             var href = this.href;
             location.href = href;
         })
-    }
-
-
-    //获取url的参数
-    function getUrl(name) {
-        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
-        var r = window.location.search.substr(1).match(reg);
-        if (r != null) return decodeURI(r[2]);
-        return null;
     }
 
 

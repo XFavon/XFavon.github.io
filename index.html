@@ -49,7 +49,7 @@
             <span class="fa fa-cart-arrow-down"></span>
             <div>购物车</div>
         </a>
-        <a href="./pages/me.html">
+        <a href="./pages/login.html">
             <span class="fa fa-user-circle"></span>
             <div>我的</div>
         </a>
@@ -101,12 +101,12 @@
                 <ul>
                     {{each value1.goods value2 index2}}
                     <li>
-                        <a href="#" class="goods_detail">
+                        <a href="pages/goods_detail.html?goods_id={{value2.goods_id}}" class="goods_detail">
                             <img src="{{value2.goods_small_logo}}"
                                 alt="">
                             <div class="goods_name">{{value2.goods_name}}</div>
                             <div class="goods_price">￥{{value2.goods_price}}</div>
-                            <a type="button" class="goods_likes mui-btn mui-btn-primary mui-btn-outlined" href="./pages/goods_list.html?cid={{value2.goods_cid}}">找相似</a>
+                            <a href="pages/goods_list.html?cid={{value2.cat_id}}" type="button" class="goods_likes mui-btn mui-btn-primary mui-btn-outlined" >找相似</a>
                         </a>
                     </li>
                     {{/each}}

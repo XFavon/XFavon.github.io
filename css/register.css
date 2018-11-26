@@ -17,18 +17,4 @@
 .pyg_view .mui-button-tool a {
   width: 49%;
 }
-
-.pyg_view .tips {
-  position: absolute;
-  top: 64%;
-  left: 30%;
-  width: 185px;
-  height: 34px;
-  line-height: 34px;
-  background-color: #cccccc;
-  border-radius: 10px;
-  color: #fff;
-  text-align: center;
-  display: none;
-}
 /*# sourceMappingURL=register.css.map */

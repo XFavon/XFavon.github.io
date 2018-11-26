@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../lib/fontawesome/css/font-awesome.css">
     <link rel="stylesheet" href="../lib/mui/css/mui.css">
     <link rel="stylesheet" href="../css/common.css">
-    <link rel="stylesheet" href="../css/me.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>个人用户</title>
 </head>
 
@@ -24,16 +24,16 @@
             <form class="mui-input-group">
                     <div class="mui-input-row">
                         <label>用户名</label>
-                    <input type="text" class="mui-input-clear" placeholder="请输入用户名">
+                    <input type="text" class="mui-input-clear" placeholder="请输入用户名" name="username">
                     </div>
                     <div class="mui-input-row">
                         <label>密码</label>
-                        <input type="password" class="mui-input-password" placeholder="请输入密码">
+                        <input type="password" class="mui-input-password" placeholder="请输入密码" name="userpassword">
                     </div>
                 </form>
                 <div class="mui-button-tool">
                         <a href="./register.html" class="mui-btn mui-btn-primary mui-btn-outlined">注册</a>
-                        <a href="#" class="mui-btn mui-btn-primary">登陆</a>
+                        <a href="#" class="mui-btn mui-btn-primary" id="login_btn">登陆</a>
                     </div>
     </div>
 
@@ -55,7 +55,7 @@
             <span class="fa fa-cart-arrow-down"></span>
             <div>购物车</div>
         </a>
-        <a href="./me.html">
+        <a href="./login.html">
             <span class="fa fa-user-circle"></span>
             <div>我的</div>
         </a>
@@ -81,6 +81,6 @@
 <script src="../lib/arttemplate/template-web.js"></script>
 <script src="../lib/iscroll/iscroll.js"></script>
 <script src="../js/common.js"></script>
-<script src="../js/me.js"></script>
+<script src="../js/login.js"></script>
 
 </html>

@@ -13,6 +13,7 @@
 .pyg_view {
   padding-top: 5px;
   position: relative;
+  overflow: hidden;
 }
 
 .pyg_view .goods_item {
